@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Germanify",
+  "version": "1.0",
+
+  "description": "Turns some sites names into Zangendeutsch (words taken literally)",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "Zangendeutsch@shorkboy69",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+
+  "host_permissions": [
+      "<all_urls>"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["replace.js"]
+    }
+  ]
+}
